@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BULB ON OFF</title>
+    <script>
+        function buttonClick(){
+            document.getElementById("image").innerHTML="";
+            var btn = document.getElementById("button");
+            var img = document.getElementById("image");
+
+             btn.innerHTML = (btn.innerHTML=="TURN ON")?"TURN OFF":"TURN ON";
+
+            if(btn.innerHTML==="TURN ON"){
+                img.src = "public/images/pic_bulboff.gif";
+            }if(btn.innerHTML==="TURN OFF"){
+                img.src = "public/images/pic_bulbon.gif";
+            }
+        }
+    </script>
+</head>
+<body style="display: flex;justify-content: center; align-items: center;">
+    <div style="border: 2px solid black; width: 300px;height: 400px;">
+        <img src="public/images/pic_bulboff.gif" id="image" style="width: 300px;height: 350px;border-bottom: 2px solid black;">
+        <button onclick="buttonClick()" id="button" style="width: 300px;height: 45px; border: none;font-size: 30px;font-weight: bold;">TURN ON</button>     
+    </div>
+    
+</body>
+</html>
